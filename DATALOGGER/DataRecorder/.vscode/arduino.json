@@ -1,0 +1,6 @@
+{
+    "board": "Seeeduino:samd:seeed_XIAO_m0",
+    "sketch": "DataRecorder.ino",
+    "port": "COM9",
+    "configuration": "usbstack=arduino,debug=off,sercom4=include"
+}
