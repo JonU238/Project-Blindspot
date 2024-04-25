@@ -140,7 +140,7 @@ float compHeading(){
   
   sensors_event_t event; 
   mag.getEvent(&event);
-  float heading = atan2(event.magnetic.y, event.magnetic.x);
+  float heading = atan2(event.magnetic.y, event.magnetic.x);///Try switching x and y and see if it fixes your weird angle error
   float declinationAngle = 0.19;
   heading += declinationAngle;
   // Correct for when signs are reversed.
