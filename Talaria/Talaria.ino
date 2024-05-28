@@ -68,6 +68,7 @@ GpsData cData = GetGPSData();
 
 void loop(){
   cData = GetGPSData();
+  Serial.println(compHeading());
   //Dropper detection
   if(cData.alt>dropALT){
     droppingTime = true;
@@ -81,7 +82,7 @@ void loop(){
 //END DROPPER SECTION
 
   Input = (HeadingBetweenTwoCoordinates(cData.latitude,cData.longitude,destination.lat,destination.lon)-compHeading());
-  if(abs(Input)>180){Input = 360-Input;}
+  if(abs(Input)>180){Input = 360-Input;}///WTF is this for???(i wrote this code at 2-3am)
   Setpoint = 0;
   SteerPID.Compute();
   if(Output>180){Output=180;}
@@ -110,7 +111,7 @@ GpsData GetGPSData(){
           Serial.println(gps.location.lng(), 8);
           newD = true;
         } else {
-          Serial.println("GPS data not valid");
+          //Serial.println("GPS data not valid");
         }
       }
     }
@@ -128,7 +129,7 @@ float HeadingBetweenTwoCoordinates(float lat1,float lon1,float lat2,float lon2){
   float deltay = (lat2-lat1);//in meters
   float deltax = (lon2-lon1);//in meters
   float heading = atan2(deltay,deltax);
-  Serial.println("Heading:"+String(heading*(180.0/3.1415926)));
+  //Serial.println("Heading:"+String(heading*(180.0/3.1415926)));
   return heading;
 }
 
@@ -137,10 +138,9 @@ float distanceBetweenTwoCoordinates(float lat1,float lon1,float lat2,float lon2)
 }
 
 float compHeading(){
-  
   sensors_event_t event; 
   mag.getEvent(&event);
-  float heading = atan2(event.magnetic.y, event.magnetic.x);///Try switching x and y and see if it fixes your weird angle error
+  float heading = atan2(event.magnetic.x, event.magnetic.y);///Try switching x and y and see if it fixes your weird angle error
   float declinationAngle = 0.19;
   heading += declinationAngle;
   // Correct for when signs are reversed.
