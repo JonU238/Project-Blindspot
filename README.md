@@ -5,8 +5,7 @@ A lovely [flight recap video](https://www.youtube.com/watch?v=tN8dJ-07hHI) can b
 
 ## System overview
 
-/*Insert image of chart here*/
-
+![Blindspot Overview diagram](https://github.com/JonU238/Project-Blindspot/assets/59961512/49a4dd57-f754-4b26-a829-ec10cf177af1)
 
 ### The balloon
 The balloon is a 800g Kaymont balloon, It was picked for its reliablity and was a very safe bet incase we went over our weight budget.
