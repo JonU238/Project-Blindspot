@@ -43,6 +43,7 @@ The payload has a few different subsystems
 ***
 
 ## Talaria
+Talaria is our Return To Home System that we tacked on to the project incase we had extra time before the eclipse(how naive we were) Is the only active part of the project at the moment.
 Currently using: 
 
 - BN-880 [GPS](https://store.beitian.com/products/beitian-compass-qmc5883l-amp2-6-pix4-pixhawk-gnss-gps-glonass-dual-flight-control-gps-module-bn-880q?variant=44696120295711)  with built in compass (HMC5883)
