@@ -1,7 +1,7 @@
 # Project Blindspot
 Project Blindspot got its name as during the 2024 solar eclipse I was living in the very cloudy city of Rochester NY. The main goal of the mission was to image the eclipse so I didn't miss it due to clouds. Dean and I worked on this project together. I did much of the administrative work ie. securing funding, communicating with profs and using the funds to buy parts. Both Dean and I had a hand in design, I did the circuits and some of the structure while Dean picked cameras and also worked on structures.
 
-A lovely [flight recap video](https://www.youtube.com/watch?v=tN8dJ-07hHI) can be found on  Deans' Youtube channel.
+A great [flight recap video](https://www.youtube.com/watch?v=tN8dJ-07hHI) can be found on  Deans' Youtube channel.
 
 ## System overview
 
